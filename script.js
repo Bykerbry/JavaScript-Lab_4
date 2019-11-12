@@ -7,11 +7,7 @@ let grantDeath = 0;
 /** Asks user if they want to play, and if yes, asks also for their name.*/
 let initialPrompts = _ => {
     let wantToPlay = prompt("Do you want to play?", 'Type "yes" to play.');
-    if (wantToPlay.toLowerCase() === "yes") {
-        name = prompt("What is your name?");
-    } else {
-        initialPrompts();
-    };
+    wantToPlay.toLowerCase() === "yes" ? name = prompt("What is your name?") : initialPrompts();
 };
 
 /**
